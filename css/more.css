@@ -1,0 +1,11 @@
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top a {
+  text-decoration: underline;
+  font-size: 12px;
+  font-family: "DM sans", sans-serif;
+}

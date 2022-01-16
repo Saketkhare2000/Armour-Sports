@@ -1,0 +1,132 @@
+nav {
+  background-color: #1d1d1d;
+  height: 10vh;
+  width: 100%;
+  box-shadow: 0 0 4px #00000050;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  margin: 0 100px;
+}
+.logo h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 24px;
+  color: #fff;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
+.navLinks,
+.navBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+.hamburger {
+  display: none;
+}
+.navLink,
+.navBtn {
+  padding: 10px 0;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-radius: 40px;
+  transition: all 0.1s ease-out;
+}
+.navLink a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+.navLink {
+  border-bottom: 2px solid transparent;
+}
+.navLink:hover {
+  border-bottom: 2px solid var(--brand-red);
+  border-radius: 2px;
+}
+.navLink a:hover {
+  color: var(--brand-red);
+}
+.navBtn {
+  padding: 6px 12px;
+  margin: 12px;
+  border-radius: 2px;
+  border: 1px solid var(--brand-red);
+  color: white;
+  font-weight: bold;
+}
+.navBtn.btnFill {
+  background: var(--brand-red);
+  color: white;
+}
+.navBtn:hover {
+  opacity: 0.8;
+}
+@media screen and (max-width: 980px) {
+  .nav-links {
+    width: 70%;
+  }
+  .navLink,
+  .navBtn {
+    font-size: 14px;
+  }
+  .navLink a {
+    padding: 10px 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navContent {
+    margin: 0px 16px;
+    z-index: 99999;
+  }
+  .logo {
+    z-index: 9999;
+  }
+  .hamburger {
+    cursor: pointer;
+    display: block;
+    z-index: 9999;
+    color: #f1f1f1;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    top: 100%;
+    transition: all 0.2s ease-in;
+  }
+  .navLinks,
+  .navBtns {
+    height: 0;
+    opacity: 0;
+    width: 100%;
+    background-color: #1d1d1d;
+    flex-direction: column;
+    transition: all 0.2s ease-in;
+  }
+  .open {
+    left: 0;
+  }
+  .open .navLinks,
+  .open .navBtns {
+    height: auto;
+    opacity: 1;
+  }
+}
