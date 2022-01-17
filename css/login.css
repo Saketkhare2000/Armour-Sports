@@ -89,7 +89,8 @@
 }
 @media screen and (max-width: 576px) {
   .loginFormContent {
-    height: 56vh;
+    margin-top: 20px;
+    height: 400px;
     width: 80%;
   }
 }

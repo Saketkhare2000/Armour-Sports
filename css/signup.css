@@ -86,7 +86,8 @@
 }
 @media screen and (max-width: 576px) {
   .signUpFormContent {
-    height: 64vh;
+    margin-top: 20px;
+    height: 500px;
     width: 80%;
   }
 }
