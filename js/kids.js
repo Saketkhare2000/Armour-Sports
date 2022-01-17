@@ -1,8 +1,8 @@
 //navbar open javascript
-const hamburger = document.querySelector(".hamburger");
-const nav = document.querySelector(".nav-links");
-hamburger.addEventListener("click", () => {
-  nav.classList.toggle("open");
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('open');
 });
 
 window.onload = function() {
@@ -22,3 +22,7 @@ document.getElementById("logoutBtn").addEventListener("click", function(){
 })
 
 };
+
+
+
+

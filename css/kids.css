@@ -115,6 +115,23 @@
   font-size: 12px;
   font-family: "DM sans", sans-serif;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  /* margin-top: 12px; */
+}
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 @media screen and (max-width: 768px) {
   .banner {
     background-position: center;

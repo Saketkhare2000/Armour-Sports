@@ -1,26 +1,27 @@
-.loginForm {
-  height: 90vh;
+.checkoutForm {
+  position: relative;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  background: url("https://images.unsplash.com/photo-1532444458054-01a7dd3e9fca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1241&q=80");
+  background: url("https://media.istockphoto.com/photos/weve-got-you-covered-during-lockdown-picture-id1287632111?b=1&k=20&m=1287632111&s=170667a&w=0&h=PvIcxOiA4Ofhy3FN6S4gcJXlU-EfsmkDnBKt3HmZNw8= ");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.loginForm:after {
+.checkoutForm:after {
   content: "";
   position: absolute;
-  top: 10vh;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 90vh;
+  height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
-.loginFormContent {
+.checkoutFormContent {
   min-height: fit-content;
-  padding: 40px 0;
-  width: 56vh;
+  padding: 32px 0;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,8 +30,15 @@
   background: #1d1d1d;
   box-shadow: 0px 0px 10px #1d1d1d30;
   z-index: 19;
+  margin: 40px 0;
 }
-.loginFormBody {
+.checkoutFormHeader {
+  text-align: center;
+}
+.checkoutFormHeader h5 {
+  opacity: 0.3;
+}
+.checkoutFormBody {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -39,14 +47,14 @@
   width: 80%;
   margin-top: 24px;
 }
-.loginForm form {
+.checkoutForm form {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.loginForm form .form-group {
+.checkoutForm form .form-group {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -54,11 +62,11 @@
   height: 30%;
   margin: 6px 0;
 }
-.loginForm form .form-group label {
+.checkoutForm form .form-group label {
   font-size: 1rem;
   font-family: "DM sans", sans-serif;
 }
-.loginForm form .form-group input {
+.checkoutForm form .form-group input {
   height: 42px;
   border-radius: 4px;
   border: none;
@@ -69,28 +77,25 @@
   font-family: "DM sans", sans-serif;
   margin: 8px 0;
 }
-.loginForm form button {
+.checkoutForm form button {
   border: 1px solid var(--brand-red);
   outline: none;
-  border-radius: 4px;
+  border-radius: 2px;
   margin-top: 16px;
   background-color: transparent;
-
   color: white;
   transition: all 0.1s ease-in-out;
 }
-.loginForm form button:hover {
+.checkoutForm form button:hover {
   background-color: var(--brand-red);
   color: white;
-}
-.login-image {
-  width: 100%;
-  height: 100%;
+  border: 1px solid var(--brand-red);
 }
 @media screen and (max-width: 576px) {
-  .loginFormContent {
-    margin-top: 20px;
-    height: 400px;
-    width: 80%;
+  .checkoutFormContent {
+    width: 90%;
+  }
+  .checkoutFormBody {
+    width: 90%;
   }
 }
