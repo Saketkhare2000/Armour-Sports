@@ -22,25 +22,48 @@
     <nav>
       <div class="navContent">
         <div class="logo">
-          <a href="index.html">
-            <h1>Armour Sports</h1>
-          </a>
+          <a href="index.html"> <h1>Armour Sports</h1></a>
         </div>
         <div class="nav-links">
           <ul class="navLinks">
-            <li class="navLink"><a href="men.html">Men</a></li>
-            <li class="navLink"><a href="women.html">Women</a></li>
-            <li class="navLink"><a href="children.html">Kids</a></li>
+            <div class="dropdown">
+              <a href="#" class="navLink">Men</a>
+              <div class="dropdown-content">
+                <a href="#" class="navLink">Category 1</a>
+                <a href="#" class="navLink">Category 2</a>
+                <a href="#" class="navLink">Category 3</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <a href="#" class="navLink">Women</a>
+              <div class="dropdown-content">
+                <a href="#" class="navLink">Category 1</a>
+                <a href="#" class="navLink">Category 2</a>
+                <a href="#" class="navLink">Category 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a href="#" class="navLink">Kids</a>
+              <div class="dropdown-content">
+                <a href="#" class="navLink">Category 1</a>
+                <a href="#" class="navLink">Category 2</a>
+                <a href="#" class="navLink">Category 3</a>
+              </div>
+            </div>
           </ul>
           <div class="navBtns" id="authBtns">
-            <a href="login.html" class="navBtn">Login</a>
-            <a href="signup.html" class="navBtn btnFill">Sign Up</a>
-          </div>
-          <div class="navBtns" id="signedBtns">
-            <a href="cart.html" id="cartBtn" class="navBtn btnFill"
-              >Cart <i class="fas fa-shopping-cart"></i
-            ></a>
-            <a href="index.html" id="logoutBtn" class="navBtn">Logout</a>
+            <a href="cart.html" id="cartBtn" class="navBtn btnFill">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+            <div class="dropdown" style="cursor: pointer">
+              <a class="navBtn"><i class="fas fa-user"></i></a>
+              <div class="dropdown-content">
+                <a href="login.html" id="loginBtn" class="navBtn">Login</a>
+                <a href="signup.html" id="signUpBtn" class="navBtn">Sign Up</a>
+                <a href="index.html" id="logoutBtn" class="navBtn">Logout</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="hamburger">

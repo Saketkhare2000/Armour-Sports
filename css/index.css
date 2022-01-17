@@ -48,36 +48,8 @@
   display: flex;
   margin-top: 20px;
 }
-.btn-fill {
-  width: 150px;
-  text-align: center;
-  background: #000;
-  color: #fff;
-  padding: 20px 10px;
-  cursor: pointer;
-  font-family: "Gotham", sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 19px;
-  margin-right: 15px;
-  color: #ffffff;
-  display: inline-block;
-  position: relative;
-}
-.btn-fill::before {
-  content: "";
-  position: absolute;
-  width: 98%;
-  height: 95%;
-  border: solid 2px black;
-  background-color: var(--brand-red);
-  z-index: -1;
-  top: 4px;
-  left: 4px;
-}
-.btn-fill:hover::before {
-  top: 6px;
-  left: 6px;
+.btns .btn-fill:hover {
+  color: white;
 }
 .category,
 .explore {
@@ -144,13 +116,23 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 85vh;
+  margin: 80px 0px;
 }
 .bestsellers {
   flex-direction: row-reverse;
 }
-.explore-desc {
-  width: 48%;
+.hero-carousel {
+  width: 100% !important;
+  height: 90vh !important;
+  overflow: hidden;
+}
+.hero-carousel .carousel-item img {
+  height: 90vh;
+  object-fit: cover;
+}
+.explore-desc,
+.desc-carousel {
+  width: 50%;
   height: 80%;
   display: flex;
   flex-direction: column;
@@ -191,6 +173,10 @@
   .hero .heroImg {
     display: none;
   }
+  .carousel {
+    width: 100%;
+    height: 100%;
+  }
   .category .category-container {
     margin-top: 20px;
     justify-content: center;
@@ -225,7 +211,6 @@
     height: 100%;
   }
 }
-
 @media screen and (max-width: 576px) {
   .hero {
     position: relative;

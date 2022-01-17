@@ -13,7 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/globals.css" />
-    <link rel="stylesheet" href="./css/men.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
     <link rel="stylesheet" href="./css/nav.css" />
     <link rel="stylesheet" href="./css/footer.css" />
   </head>
@@ -26,19 +26,44 @@
         </div>
         <div class="nav-links">
           <ul class="navLinks">
-            <li class="navLink"><a href="men.html">Men</a></li>
-            <li class="navLink"><a href="women.html">Women</a></li>
-            <li class="navLink"><a href="children.html">Kids</a></li>
+            <div class="dropdown">
+              <a href="#" class="navLink">Men</a>
+              <div class="dropdown-content">
+                <a href="#" class="navLink">Category 1</a>
+                <a href="#" class="navLink">Category 2</a>
+                <a href="#" class="navLink">Category 3</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <a href="#" class="navLink">Women</a>
+              <div class="dropdown-content">
+                <a href="#" class="navLink">Category 1</a>
+                <a href="#" class="navLink">Category 2</a>
+                <a href="#" class="navLink">Category 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a href="#" class="navLink">Kids</a>
+              <div class="dropdown-content">
+                <a href="#" class="navLink">Category 1</a>
+                <a href="#" class="navLink">Category 2</a>
+                <a href="#" class="navLink">Category 3</a>
+              </div>
+            </div>
           </ul>
           <div class="navBtns" id="authBtns">
-            <a href="login.html" class="navBtn">Login</a>
-            <a href="signup.html" class="navBtn btnFill">Sign Up</a>
-          </div>
-          <div class="navBtns" id="signedBtns">
-            <a href="cart.html" id="cartBtn" class="navBtn btnFill"
-              >Cart <i class="fas fa-shopping-cart"></i
-            ></a>
-            <a href="index.html" id="logoutBtn" class="navBtn">Logout</a>
+            <a href="cart.html" id="cartBtn" class="navBtn btnFill">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+            <div class="dropdown" style="cursor: pointer">
+              <a class="navBtn"><i class="fas fa-user"></i></a>
+              <div class="dropdown-content">
+                <a href="login.html" id="loginBtn" class="navBtn">Login</a>
+                <a href="signup.html" id="signUpBtn" class="navBtn">Sign Up</a>
+                <a href="index.html" id="logoutBtn" class="navBtn">Logout</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="hamburger">
@@ -48,84 +73,134 @@
     </nav>
     <!-- Navbar Ends here -->
 
-    <!-- Products Section Starts Here -->
-    <section class="products">
-      <div class="top">
-        <h1>Cart Items</h1>
+    <!-- Product Section Starts Here -->
+
+    <section class="cart">
+      <div class="header-text">
+        <h2>Cart</h2>
       </div>
-      <div class="card-deck">
-        <!-- Card 1 -->
-        <a href="product.html">
-          <div class="card">
-            <div class="card-img-top">
-              <img
-                src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80"
-                alt=" "
-              />
-              <p>₹1 199.00</p>
-            </div>
-            <div class="card-body">
-              <h3>Ultra</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur</p>
-              <a href="#" class="card-btn buy-btn">Remove</a>
+      <div class="products">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-img">
+            <img
+              src="https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt=""
+            />
+          </div>
+          <div class="product-info">
+            <h2>Product Name</h2>
+            <p>Product Description</p>
+            <p>Price: <span>$100</span></p>
+            <div class="options">
+              <select name="" id="">
+                <option value="">Size</option>
+                <option value="">S</option>
+                <option value="">M</option>
+                <option value="">L</option>
+                <option value="">XL</option>
+              </select>
+              <select name="" id="">
+                <option value="">Quantity</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
             </div>
           </div>
-        </a>
-        <!-- Card 1 Ends here -->
-        <!-- Card 1 -->
-        <a href="product.html">
-          <div class="card">
-            <div class="card-img-top">
-              <img
-                src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80"
-                alt=" "
-              />
-              <p>₹1 199.00</p>
-            </div>
-            <div class="card-body">
-              <h3>Ultra</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur</p>
-              <a href="#" class="card-btn buy-btn">Remove</a>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-img">
+            <img
+              src="https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt=""
+            />
+          </div>
+          <div class="product-info">
+            <h2>Product Name</h2>
+            <p>Product Description</p>
+            <p>Price: <span>$500</span></p>
+            <div class="options">
+              <select name="" id="">
+                <option value="">Size</option>
+                <option value="">S</option>
+                <option value="">M</option>
+                <option value="">L</option>
+                <option value="">XL</option>
+              </select>
+              <select name="" id="">
+                <option value="">Quantity</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+              </select>
             </div>
           </div>
-        </a>
-        <!-- Card 1 Ends here -->
-        <!-- Card 1 -->
-        <a href="product.html">
-          <div class="card">
-            <div class="card-img-top">
-              <img
-                src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80"
-                alt=" "
-              />
-              <p>₹1 199.00</p>
-            </div>
-            <div class="card-body">
-              <h3>Ultra</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur</p>
-              <a href="#" class="card-btn buy-btn">Remove</a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-img">
+            <img
+              src="https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt=""
+            />
+          </div>
+          <div class="product-info">
+            <h2>Product Name</h2>
+            <p>Product Description</p>
+            <p>Price: <span>$300</span></p>
+            <div class="options">
+              <select name="" id="">
+                <option value="">Size</option>
+                <option value="">S</option>
+                <option value="">M</option>
+                <option value="">L</option>
+                <option value="">XL</option>
+              </select>
+              <select name="" id="">
+                <option value="">Quantity</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+              </select>
             </div>
           </div>
-        </a>
-        <!-- Card 1 Ends here -->
-        <!-- Card 1 -->
-        <a href="product.html">
-          <div class="card">
-            <div class="card-img-top">
-              <img
-                src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80"
-                alt=" "
-              />
-              <p>₹1 199.00</p>
-            </div>
-            <div class="card-body">
-              <h3>Ultra</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur</p>
-              <a href="#" class="card-btn buy-btn">Remove</a>
-            </div>
-          </div>
-        </a>
-        <!-- Card 1 Ends here -->
+        </div>
+      </div>
+      <div class="checkout-card">
+        <h1>Order Summary</h1>
+        <hr class="divider" />
+        <div class="checkout-product">
+          <h2>Product Name</h2>
+          <p>Quantity: <span class="productQuantity">1</span></p>
+          <p>Price: $<span class="productPrice">100</span></p>
+        </div>
+        <hr />
+        <div class="checkout-product">
+          <h2>Product Name</h2>
+          <p>Quantity: <span class="productQuantity">1</span></p>
+          <p>Price: $<span class="productPrice">500</span></p>
+        </div>
+        <hr />
+        <div class="checkout-product">
+          <h2>Product Name</h2>
+          <p>Quantity: <span class="productQuantity">1</span></p>
+          <p>Price: $<span class="productPrice">300</span></p>
+        </div>
+        <hr />
+        <div class="checkout-total">
+          <h3>Total amount:</h3>
+          <p>$<span class="totalPrice">100</span></p>
+        </div>
+        <div class="checkout-btn">
+          <a href="#" class="card-btn buy-btn checkoutBtn">Checkout</a>
+        </div>
       </div>
     </section>
 

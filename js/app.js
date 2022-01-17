@@ -5,14 +5,14 @@ hamburger.addEventListener('click', () => {
     nav.classList.toggle('open'); 
 });
 
+// const loadingScreen = document.querySelector('.loadingScreen');
 
+// setTimeout(() => {
+//     loadingScreen.classList.toggle('scrnRemove');
+// }, 4000);
 
 const tl = gsap.timeline({default:{ease: "power1.out"}});
-// tl.to(".splash-screen", {
-//     duration: 1,
-//     y: "-100%",
-//     delay:0.5
-// })
+tl.to('.loadingScreen', {duration: 0.5, y:"-100%", ease: "power1.out", delay:1.5})
 tl.fromTo('nav', {
     duration: 1,
     opacity: 0.25,
@@ -32,15 +32,21 @@ tl.fromTo('nav', {
 
 window.onload = function() {
     if(localStorage.getItem('isLoggedIn') === 'true'){
-        document.getElementById("signedBtns").style.display = "flex";
-        document.getElementById("authBtns").style.display = "none";
+        document.getElementById("logoutBtn").style.display = "block";
+        document.getElementById("loginBtn").style.display = "none";
+        document.getElementById("signUpBtn").style.display = "none";
     }
     else{
-        document.getElementById("authBtns").style.display = "flex";
-        document.getElementById("signedBtns").style.display = "none";
+        document.getElementById("logoutBtn").style.display = "none";
+        document.getElementById("loginBtn").style.display = "block";
+        document.getElementById("signUpBtn").style.display = "block";
 }
 document.getElementById("logoutBtn").addEventListener("click", function(){
     localStorage.removeItem("isLoggedIn");
     location.reload();
 })
+
 };
+
+
+
